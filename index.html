@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission Control — ПЗ 43</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero"></header>
+      <div class="layout">
+        <section class="card">
+          <h2>Обратный отсчёт</h2>
+          <p class="muted">
+            Подготовьте запуск: отсчёт, проверка систем, разрешение.
+          </p>
+          <div class="counter" id="seconds">5</div>
+          <label class="checkbox"
+            ><input id="fail-checkbox" type="checkbox" /> Смоделировать ошибку
+            разрешения</label
+          >
+          <div class="controls">
+            <button class="btn btn--primary" id="launch-button">
+              Начать запуск
+            </button>
+            <button class="btn" id="reset-button">Сбросить</button>
+          </div>
+        </section>
+        <section class="card">
+          <h2>Состояние миссии</h2>
+          <div class="step-grid">
+            <div class="step-card" id="stage-countdown">1. Отсчёт</div>
+            <div class="step-card" id="stage-systems">2. Системы</div>
+            <div class="step-card" id="stage-permission">3. Разрешение</div>
+          </div>
+          <p class="status" id="status" role="status">Миссия готова.</p>
+          <div class="output output--small" id="result" aria-live="polite">
+            Ожидание запуска
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
